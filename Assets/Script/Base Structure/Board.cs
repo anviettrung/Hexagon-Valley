@@ -11,11 +11,7 @@ public class Board : MonoBehaviour
 
 	[HideInInspector]
 	public List<HexPoint> hexMatrix = new List<HexPoint>();
-
-	protected void Awake()
-	{
-		NewBoard();
-	}
+	public List<BoardEntity> entities = new List<BoardEntity>();
 
 	public void NewBoard(int w, int h)
 	{
@@ -62,9 +58,29 @@ public class Board : MonoBehaviour
 		return null;
 	}
 
-	public HexPoint GetPoint(Vector2 pos)
+	public HexPoint GetPoint(Vector2Int pos)
 	{
 		
-		return GetPoint((int)pos.x, (int)pos.y);
+		return GetPoint(pos.x, pos.y);
+	}
+
+	public bool AddEntity(BoardEntity ent, Vector2Int firstPos)
+	{
+		entities.Add(ent);
+		ent.board = this;
+		ent.positionInBoard = firstPos;
+		ent.transform.position = GetPoint(firstPos).worldPosition;
+
+		return true;
+	}
+
+	public bool AddEntity(BoardEntity ent, int x, int y)
+	{
+		return AddEntity(ent, new Vector2Int(x, y));
+	}
+
+	public bool AddEntity(BoardEntity ent)
+	{
+		return AddEntity(ent, Vector2Int.zero);
 	}
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class BoardEntity : MonoBehaviour
 {
 	public Board board;
-	public Vector2 positionInBoard;
+	public Vector2Int positionInBoard;
 	public float moveTime;
 
 	public Vector2IntEvent OnMoving = new Vector2IntEvent();
@@ -20,7 +20,7 @@ public class BoardEntity : MonoBehaviour
 
 	private void Start()
 	{
-		MoveToPoint((int)positionInBoard.x, (int)positionInBoard.y);
+		MoveToPoint(positionInBoard.x, positionInBoard.y);
 	}
 
 	public void MoveToPoint(int x, int y)

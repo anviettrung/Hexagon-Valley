@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class HexPoint : MonoBehaviour
 {
-	public Vector2 positionInBoard;
+	public Vector2Int positionInBoard;
 	public Vector2 worldPosition;
 	public Board parentBoard;
 
@@ -28,7 +28,7 @@ public class HexPoint : MonoBehaviour
 	{
 		gameObject.name = "Point [" + x + ", " + y + "]";
 
-		positionInBoard = new Vector2(x, y);
+		positionInBoard = new Vector2Int(x, y);
 		SetPositionInWorldCoordinate();
 	}
 

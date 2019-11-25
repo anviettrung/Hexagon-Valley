@@ -7,7 +7,7 @@ public class GameManager : Singleton<GameManager>
 	public Board boardModel;
 	public GameObject playerCharacterModel;
 
-	public Vector2 playerFirstPositionInBoard;
+	public Vector2Int playerFirstPositionInBoard;
 
 	protected BoardEntity player;
 	protected PlayerInput playerInput;
@@ -15,14 +15,14 @@ public class GameManager : Singleton<GameManager>
 	void Awake()
 	{
 		playerInput = GetComponent<PlayerInput>();
+		boardModel.NewBoard();
 	}
 
 
 	private void Start()
 	{
 		player = Instantiate(playerCharacterModel).GetComponent<BoardEntity>();
-		player.positionInBoard= boardModel.GetPoint(playerFirstPositionInBoard).positionInBoard;
-		player.board = boardModel;
+		boardModel.AddEntity(player, playerFirstPositionInBoard);
 		playerInput.Init(player);
 	}
 }
