@@ -9,12 +9,10 @@ public class Board : MonoBehaviour
 	public float twoPointDistance;
 	public HexPoint hexPointModel;
 
-	protected List<HexPoint> hexMatrix = new List<HexPoint>();
+	[HideInInspector]
+	public List<HexPoint> hexMatrix = new List<HexPoint>();
 
-	public const float cos60 = 0.5f;
-	public const float sin60 = 0.866f;
-
-	protected void Start()
+	protected void Awake()
 	{
 		NewBoard();
 	}
@@ -23,16 +21,18 @@ public class Board : MonoBehaviour
 	{
 		hexMatrix.Clear();
 
-		hexMatrix = new List<HexPoint>(w * h);
+		width  = w;
+		height = h;
+
+		hexMatrix = new List<HexPoint>(width * height);
 
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
 				HexPoint point = Instantiate(hexPointModel.gameObject).GetComponent<HexPoint>();
 
+				point.SetParentBoard(this);
 				point.SetPoint(j, i);
-				SetPointPosition(point);
 
-				point.transform.SetParent(this.transform);
 				hexMatrix.Add(point);
 			}
 		}
@@ -45,30 +45,26 @@ public class Board : MonoBehaviour
 		NewBoard(width, height);
 	}
 
-	public void LogMatrix()
+	public HexPoint GetPoint(int x, int y)
 	{
+		if (x < 0 || x >= width)
+			return null;
+		if (y < 0 || y >= height)
+			return null;
 
-	}
-
-	public void SetPointPosition(HexPoint point)
-	{
-		float d = twoPointDistance;
-		Vector2 pos      = point.boardPosition;
-		Vector2 boardPos = this.transform.position;
-		float deltaX = d * (pos.x - pos.y * cos60);
-		float deltaY = -d * pos.y * sin60;
-
-		point.transform.position = new Vector2(boardPos.x + deltaX, boardPos.y + deltaY);
-		point.worldPosition = point.transform.position;
-	}
-
-	public HexPoint getPoint(int x, int y)
-	{
 		int index = x + y * width;
+
 		if (index < hexMatrix.Count)
 			return hexMatrix[index];
 
 		// Log error
+		Debug.Log("error");
 		return null;
+	}
+
+	public HexPoint GetPoint(Vector2 pos)
+	{
+		
+		return GetPoint((int)pos.x, (int)pos.y);
 	}
 }
