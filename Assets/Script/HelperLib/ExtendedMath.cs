@@ -12,8 +12,8 @@ public class Vector2IntEvent : UnityEvent<int, int>
 // Extended Math Functions
 public static class ExdMath {
 
-	public const float cos60 = 0.5f;
-	public const float sin60 = 0.866f;
+	public const float COS60 = 0.5f;
+	public const float SIN60 = 0.866f;
 
 	public static float SignedAngle(Vector2 vec1, Vector2 vec2) {
 		int signed = 1;

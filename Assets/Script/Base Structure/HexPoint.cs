@@ -9,19 +9,21 @@ public class HexPoint : MonoBehaviour
 	public Vector2 worldPosition;
 	public Board parentBoard;
 
-	public bool isWireframeMode;
+	public State state;
 
 	[HideInInspector]
 	public Vector2IntEvent OnTouched = new Vector2IntEvent();
 
 	private SpriteRenderer spriteRenderer;
 	private SpriteMask spriteMask;
+	private Animator anim;
 
 	private void Awake()
 	{
+		anim = GetComponent<Animator>();
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		spriteMask = GetComponent<SpriteMask>();
-		spriteMask.enabled = isWireframeMode;
+		ChangeStateTo(State.NORMAL);
 	}
 
 	public void SetPoint(int x, int y)
@@ -41,8 +43,8 @@ public class HexPoint : MonoBehaviour
 	public void SetPositionInWorldCoordinate()
 	{
 		float d = parentBoard.twoPointDistance;
-		float deltaX = d * (positionInBoard.x - positionInBoard.y * ExdMath.cos60);
-		float deltaY = -d * positionInBoard.y * ExdMath.sin60;
+		float deltaX = d * (positionInBoard.x - positionInBoard.y * ExdMath.COS60);
+		float deltaY = -d * positionInBoard.y * ExdMath.SIN60;
 
 		worldPosition = new Vector2(
 			parentBoard.transform.position.x + deltaX, 
@@ -53,13 +55,29 @@ public class HexPoint : MonoBehaviour
 
 	void ToggleVisible()
 	{
-		isWireframeMode = !isWireframeMode;
-		spriteMask.enabled = isWireframeMode ? true : false;
+		if (state == State.NORMAL)
+			ChangeStateTo(State.WIREFRAME);
+		else if (state == State.WIREFRAME)
+			ChangeStateTo(State.CAN_BE_SELECT);
+		else
+			ChangeStateTo(State.NORMAL);
 	}
 
 	private void OnMouseDown()
 	{
-		OnTouched.Invoke((int)positionInBoard.x, (int)positionInBoard.y);
-		ToggleVisible();
+		OnTouched.Invoke(positionInBoard.x, positionInBoard.y);
 	}
+
+	public void ChangeStateTo(State s)
+	{
+		state = s;
+		anim.SetInteger("StateCode",(int)s);
+	}
+
+	public enum State
+	{
+		NORMAL,
+		WIREFRAME,
+		CAN_BE_SELECT,
+	};
 }

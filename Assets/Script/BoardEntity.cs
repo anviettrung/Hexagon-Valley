@@ -37,19 +37,4 @@ public class BoardEntity : MonoBehaviour
 		OnMoving.Invoke(x, y);
 		mover.MoveTo(point.worldPosition, moveTime);
 	}
-
-	public void MoveRight(int step)
-	{
-		MoveToPoint((int)positionInBoard.x + step, (int)positionInBoard.y);
-	}
-
-	public void MoveDown(int step)
-	{
-		MoveToPoint((int)positionInBoard.x, (int)positionInBoard.y + step);
-	}
-
-	public void MoveRightDown(int step)
-	{
-		MoveToPoint((int)positionInBoard.x + step, (int)positionInBoard.y + step);
-	}
 }

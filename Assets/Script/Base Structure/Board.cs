@@ -50,7 +50,7 @@ public class Board : MonoBehaviour
 	}
 
 	/// <summary>
-	/// Gets point at position (x, y) in hex matrix
+	/// Gets a hex point at position (x, y) in hex matrix
 	/// </summary>
 	/// <returns>The hex point.</returns>
 	/// <param name="x">The x coordinate.</param>
@@ -71,7 +71,7 @@ public class Board : MonoBehaviour
 	}
 
 	/// <summary>
-	/// Gets point at position "pos" in hex matrix
+	/// Gets a hex point in hex matrix
 	/// </summary>
 	/// <returns>The hex point.</returns>
 	/// <param name="pos">Position in board.</param>
