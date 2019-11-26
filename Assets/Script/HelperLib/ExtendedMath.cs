@@ -15,6 +15,15 @@ public static class ExdMath {
 	public const float COS60 = 0.5f;
 	public const float SIN60 = 0.866f;
 
+	public static readonly Vector2Int[] DIRECTION_SIX = {
+		new Vector2Int(0, -1),
+		new Vector2Int(1, 0),
+		new Vector2Int(1, 1),
+		new Vector2Int(0, 1),
+		new Vector2Int(-1, 0),
+		new Vector2Int(-1, -1)
+	};
+
 	public static float SignedAngle(Vector2 vec1, Vector2 vec2) {
 		int signed = 1;
 		if (Vector3.Cross(vec1, vec2).z < 0) signed = -1;

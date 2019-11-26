@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c015c7a1ffbb842c4b59d1126fb91fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMoving: 0
 --- !u!114 &3021550808550017994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,8 +223,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   board: {fileID: 0}
   positionInBoard: {x: 0, y: 0}
-  moveTime: 1
-  mover: {fileID: 0}
+  moveTime: 0.5
+  OnMoving:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3884388446175977707
 GameObject:
   m_ObjectHideFlags: 0

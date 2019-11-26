@@ -15,14 +15,12 @@ public class HexPoint : MonoBehaviour
 	public Vector2IntEvent OnTouched = new Vector2IntEvent();
 
 	private SpriteRenderer spriteRenderer;
-	private SpriteMask spriteMask;
 	private Animator anim;
 
 	private void Awake()
 	{
 		anim = GetComponent<Animator>();
 		spriteRenderer = GetComponent<SpriteRenderer>();
-		spriteMask = GetComponent<SpriteMask>();
 		ChangeStateTo(State.NORMAL);
 	}
 
@@ -51,6 +49,22 @@ public class HexPoint : MonoBehaviour
 			parentBoard.transform.position.y + deltaY
 		);
 		transform.position = worldPosition;
+	}
+
+	public static int Distance(Vector2Int pointA, Vector2Int pointB)
+	{
+		Vector2Int delta = pointA - pointB;
+		int d = 0;
+
+		if (delta.x * delta.y > 0) {
+			d = Mathf.Abs(delta.x) + Mathf.Abs(delta.y) + Mathf.Abs(delta.x - delta.y);
+			d = (int)(d * 0.5f);
+		} else {
+			d = Mathf.Abs(delta.x) + Mathf.Abs(delta.y);
+		}
+
+		Debug.Log(d);
+		return d;
 	}
 
 	void ToggleVisible()

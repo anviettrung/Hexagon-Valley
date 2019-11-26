@@ -18,23 +18,20 @@ public class BoardEntity : MonoBehaviour
 		mover = GetComponent<Movable>();
 	}
 
-	private void Start()
-	{
-		MoveToPoint(positionInBoard.x, positionInBoard.y);
-	}
-
-	public void MoveToPoint(int x, int y)
+	public bool MoveToPoint(int x, int y)
 	{
 		if (mover.isMoving)
-			return;
+			return false;
 
 		HexPoint point = board.GetPoint(x, y);
 
 		if (point == null)
-			return;
+			return false;
 
 		positionInBoard = point.positionInBoard;
 		OnMoving.Invoke(x, y);
 		mover.MoveTo(point.worldPosition, moveTime);
+
+		return true;
 	}
 }
