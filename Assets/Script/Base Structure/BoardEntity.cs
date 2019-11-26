@@ -11,7 +11,8 @@ public class BoardEntity : MonoBehaviour
 
 	public Vector2IntEvent OnMoving = new Vector2IntEvent();
 
-	protected Movable mover;
+	[HideInInspector]
+	public Movable mover;
 
 	private void Awake()
 	{

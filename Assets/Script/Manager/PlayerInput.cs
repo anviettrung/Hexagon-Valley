@@ -18,7 +18,6 @@ public class PlayerInput : MonoBehaviour
 		controlBoard = ent.board;
 
 		for (int i = 1; i < controlBoard.hexMatrix.Count; i++) {
-			Debug.Log(controlBoard.hexMatrix[i]);
 			controlBoard.hexMatrix[i].OnTouched.AddListener(Move);
 		}
 
@@ -27,7 +26,7 @@ public class PlayerInput : MonoBehaviour
 
 	private void Move(int x, int y)
 	{
-		if (HexPoint.Distance(new Vector2Int(x, y), player.positionInBoard) == 1) {
+		if (controlBoard.Distance(new Vector2Int(x, y), player.positionInBoard) == 1) {
 			Vector2Int startPos = player.positionInBoard;
 			if (player.MoveToPoint(x, y) == true) {
 				ChangeHexpointStateAroundPosition(startPos, HexPoint.State.NORMAL);

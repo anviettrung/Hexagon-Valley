@@ -110,12 +110,71 @@ public class Board : MonoBehaviour
 	}
 
 	/// <summary>
-	/// Puts the entity on the board at origin (0, 0)
+	/// Puts the entity on the board
 	/// </summary>
 	/// <returns><c>true</c>, if entity was added, <c>false</c> otherwise.</returns>
 	/// <param name="ent">Entity.</param>
 	public bool AddEntity(BoardEntity ent)
 	{
-		return AddEntity(ent, Vector2Int.zero);
+		return AddEntity(ent, ent.positionInBoard.x, ent.positionInBoard.y);
+	}
+
+	public int Distance(Vector2Int pointA, Vector2Int pointB)
+	{
+		Vector2Int delta = pointA - pointB;
+		int d = 0;
+
+		if (delta.x * delta.y > 0) {
+			d = Mathf.Abs(delta.x) + Mathf.Abs(delta.y) + Mathf.Abs(delta.x - delta.y);
+			d = (int)(d * 0.5f);
+		} else {
+			d = Mathf.Abs(delta.x) + Mathf.Abs(delta.y);
+		}
+
+		Debug.Log(d);
+		return d;
+	}
+
+	public int Path(Vector2Int startPos, Vector2Int endPos, out HexPoint[] path)
+	{
+		Vector2Int delta = endPos - startPos; // go correct direction
+		int pathLength = 0;
+		int diagonalLength = 0;
+
+		if (delta.x * delta.y > 0) {
+			diagonalLength = Mathf.Abs(delta.x) + Mathf.Abs(delta.y) - Mathf.Abs(delta.x - delta.y);
+			diagonalLength = (int)(diagonalLength * 0.5f);
+
+			pathLength = Mathf.Abs(delta.x) + Mathf.Abs(delta.y) - diagonalLength;
+
+		} else {
+			pathLength = Mathf.Abs(delta.x) + Mathf.Abs(delta.y);
+		}
+
+		path = new HexPoint[pathLength+1];
+		path[0] = GetPoint(startPos);
+		int i = 1;
+
+		// move in diagonal
+		while (i <= diagonalLength) {
+			path[i] = GetPoint(path[i - 1].positionInBoard + ExdMath.DIRECTION_SIX[2] * (int)Mathf.Sign(delta.x));
+			i++;
+		}
+
+		// move in x or y axis
+		if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y)) {
+			while (i <= pathLength) {
+				path[i] = GetPoint(path[i - 1].positionInBoard + ExdMath.DIRECTION_SIX[1] * (int)Mathf.Sign(delta.x)); 
+				i++;
+			}
+
+		} else {
+			while (i <= pathLength) {
+				path[i] = GetPoint(path[i - 1].positionInBoard + ExdMath.DIRECTION_SIX[3] * (int)Mathf.Sign(delta.y));
+				i++;
+			}
+		}
+
+		return pathLength;
 	}
 }

@@ -51,20 +51,9 @@ public class HexPoint : MonoBehaviour
 		transform.position = worldPosition;
 	}
 
-	public static int Distance(Vector2Int pointA, Vector2Int pointB)
+	public int Distance(Vector2Int targetPoint)
 	{
-		Vector2Int delta = pointA - pointB;
-		int d = 0;
-
-		if (delta.x * delta.y > 0) {
-			d = Mathf.Abs(delta.x) + Mathf.Abs(delta.y) + Mathf.Abs(delta.x - delta.y);
-			d = (int)(d * 0.5f);
-		} else {
-			d = Mathf.Abs(delta.x) + Mathf.Abs(delta.y);
-		}
-
-		Debug.Log(d);
-		return d;
+		return parentBoard.Distance(positionInBoard, targetPoint);
 	}
 
 	void ToggleVisible()

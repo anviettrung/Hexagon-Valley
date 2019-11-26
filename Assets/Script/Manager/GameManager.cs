@@ -24,5 +24,11 @@ public class GameManager : Singleton<GameManager>
 		player = Instantiate(playerCharacterModel).GetComponent<BoardEntity>();
 		boardModel.AddEntity(player, playerFirstPositionInBoard);
 		playerInput.Init(player);
+
+		SnakeAI[] snakes = GameObject.FindObjectsOfType<SnakeAI>();
+		for (int i=0; i < snakes.Length; i++) {
+			boardModel.AddEntity(snakes[i].body);
+			snakes[i].StartHunting(player);
+		}
 	}
 }
