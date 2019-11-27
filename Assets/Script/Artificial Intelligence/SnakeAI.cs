@@ -24,7 +24,7 @@ public class SnakeAI : MonoBehaviour
 	public void StartHunting(BoardEntity tar)
 	{
 		target = tar;
-		target.OnStartMovingFrom.AddListener(Chase);
+		target.OnMoving.AddListener(Chase);
 		body.OnMoveDone.AddListener(KillPlayerInThisPoint);
 	}
 
@@ -32,17 +32,27 @@ public class SnakeAI : MonoBehaviour
 	{
 		HexPoint[] path;
 		int totalStep = body.board.Path(body.positionInBoard, target.positionInBoard, out path);
-		if (totalStep >= stepPerMove && moveType == MoveType.MoveType1) {
-			body.MoveToPoint(path[stepPerMove].positionInBoard.x, path[stepPerMove].positionInBoard.y);
+		if (stepPerMove <= totalStep && moveType == MoveType.MoveType1) {
+			if (path[stepPerMove].canWalk)
+				body.MoveToPoint(path[stepPerMove].positionInBoard.x, path[stepPerMove].positionInBoard.y);
 		}
 		if (totalStep > 0 && moveType == MoveType.MoveType2) {
 			Vector2Int direct = path[1].positionInBoard - body.positionInBoard;
-			Vector2Int des = body.positionInBoard + direct * stepPerMove;
-			//for (int i = 1; i <= stepPerMove; i++) {
-			//	if (GameManager.Instance.player.positionInBoard == (body.positionInBoard+direct*i))
-			//		GameManager.Instance.player.Kill();
-			//}
-			body.MoveToPoint(des.x, des.y);
+			Vector2Int des;
+
+			bool doMovement = true;
+			for (int i = 1; i <= stepPerMove; i++) {
+				des = body.positionInBoard + direct * i;
+				if (body.board.GetPoint(des).canWalk == false) {
+					doMovement = false;
+					break;
+				}
+			}
+
+			if (doMovement) {
+				des = body.positionInBoard + direct * stepPerMove;
+				body.MoveToPoint(des.x, des.y);
+			}
 		}
 
 	}

@@ -11,6 +11,8 @@ public class HexPoint : MonoBehaviour
 
 	public State state;
 
+	public bool canWalk;
+
 	[HideInInspector]
 	public Vector2IntEvent OnTouched = new Vector2IntEvent();
 
@@ -21,7 +23,9 @@ public class HexPoint : MonoBehaviour
 	{
 		anim = GetComponent<Animator>();
 		spriteRenderer = GetComponent<SpriteRenderer>();
-		ChangeStateTo(state);
+		OnTouched.RemoveAllListeners();
+
+		ForceChangeStateTo(state);
 	}
 
 	public void SetPoint(int x, int y)
@@ -73,8 +77,20 @@ public class HexPoint : MonoBehaviour
 
 	public void ChangeStateTo(State s)
 	{
+		if (state == State.WIREFRAME)
+			return;
+
+		ForceChangeStateTo(s);
+	}
+
+	public void ForceChangeStateTo(State s)
+	{
 		state = s;
-		anim.SetInteger("StateCode",(int)s);
+		anim.SetInteger("StateCode", (int)s);
+		if (state == State.WIREFRAME)
+			canWalk = false;
+		else
+			canWalk = true;
 	}
 
 	public enum State

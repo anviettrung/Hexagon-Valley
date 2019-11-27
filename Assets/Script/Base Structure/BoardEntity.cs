@@ -35,6 +35,7 @@ public class BoardEntity : MonoBehaviour
 
 		OnStartMovingFrom.Invoke(positionInBoard.x, positionInBoard.y);
 		positionInBoard = point.positionInBoard;
+		OnMoving.Invoke(positionInBoard.x, positionInBoard.y);
 		mover.MoveTo(point, moveTime, OnMoving, OnMoveDone);
 
 		return true;

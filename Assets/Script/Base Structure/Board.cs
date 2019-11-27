@@ -155,6 +155,7 @@ public class Board : MonoBehaviour
 		path[0] = GetPoint(startPos);
 		int i = 1;
 
+
 		// move in diagonal
 		while (i <= diagonalLength) {
 			path[i] = GetPoint(path[i - 1].positionInBoard + ExdMath.DIRECTION_SIX[2] * (int)Mathf.Sign(delta.x));

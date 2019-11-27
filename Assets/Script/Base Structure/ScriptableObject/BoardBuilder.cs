@@ -31,7 +31,13 @@ public class BoardBuilder : MonoBehaviour
 
 	public void OnClickPoint(int x, int y)
 	{
-		currentBoard.GetPoint(x, y).ToggleState();
+		HexPoint p =  currentBoard.GetPoint(x, y);
+		Debug.Log(p);
+		if (p.state == HexPoint.State.WIREFRAME) {
+			p.ForceChangeStateTo(HexPoint.State.NORMAL);
+		} else {
+			p.ForceChangeStateTo(HexPoint.State.WIREFRAME);
+		}
 	}
 
 	public void Open()
