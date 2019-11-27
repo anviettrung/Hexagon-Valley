@@ -20,6 +20,11 @@ public class GameManager : Singleton<GameManager>
 		controlBoard = Instantiate(modelBoard.gameObject).GetComponent<Board>();
 	}
 
+	private void Init()
+	{
+
+	}
+
 	private void Start()
 	{
 		player = Instantiate(playerCharacterModel).GetComponent<BoardEntity>();

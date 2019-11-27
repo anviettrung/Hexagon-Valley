@@ -16,6 +16,8 @@ public class PlayerInput : MonoBehaviour
 
 		player = ent;
 		controlBoard = ent.board;
+		player.OnStartMovingFrom.AddListener(OnStartMoving);
+		player.OnMoveDone.AddListener(OnMoveDone);
 
 		for (int i = 1; i < controlBoard.hexMap.Count; i++) {
 			controlBoard.hexMap[i].OnTouched.AddListener(Move);
@@ -28,10 +30,7 @@ public class PlayerInput : MonoBehaviour
 	{
 		if (controlBoard.GetPoint(x, y).state == HexPoint.State.CAN_BE_SELECT) {
 			Vector2Int startPos = player.positionInBoard;
-			if (player.MoveToPoint(x, y) == true) {
-				ChangeHexpointStateAroundPosition(startPos, HexPoint.State.NORMAL);
-				ChangeHexpointStateAroundPosition(player.positionInBoard, HexPoint.State.CAN_BE_SELECT);
-			}
+			player.MoveToPoint(x, y);
 		}
 	}
 
@@ -42,5 +41,15 @@ public class PlayerInput : MonoBehaviour
 			if (p != null)
 				p.ChangeStateTo(state);
 		}
+	}
+
+	void OnStartMoving(int x, int y)
+	{
+		ChangeHexpointStateAroundPosition(controlBoard.GetPoint(x, y).positionInBoard, HexPoint.State.NORMAL);
+	}
+
+	void OnMoveDone(int x, int y)
+	{
+		ChangeHexpointStateAroundPosition(controlBoard.GetPoint(x, y).positionInBoard, HexPoint.State.CAN_BE_SELECT);
 	}
 }

@@ -10,7 +10,9 @@ public class BoardEntity : MonoBehaviour
 	public Vector2Int positionInBoard;
 	public float moveTime;
 
+	public Vector2IntEvent OnStartMovingFrom = new Vector2IntEvent();
 	public Vector2IntEvent OnMoving = new Vector2IntEvent();
+	public Vector2IntEvent OnMoveDone = new Vector2IntEvent();
 	public UnityEvent OnDead = new UnityEvent();
 
 	[HideInInspector]
@@ -31,9 +33,9 @@ public class BoardEntity : MonoBehaviour
 		if (point == null)
 			return false;
 
+		OnStartMovingFrom.Invoke(positionInBoard.x, positionInBoard.y);
 		positionInBoard = point.positionInBoard;
-		OnMoving.Invoke(x, y);
-		mover.MoveTo(point.worldPosition, moveTime);
+		mover.MoveTo(point, moveTime, OnMoving, OnMoveDone);
 
 		return true;
 	}
