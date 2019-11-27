@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b52e8d97a07034b56b0c3fbb3a45e45b, type: 3}
+  m_Name: Standard Hexmap
+  m_EditorClassIdentifier: 
+  width: 10
+  height: 10
+  twoPointDistance: 1
+  hexPointModel:
+  - {fileID: 3046106894108462097, guid: 7ef0e94292f684d099376d25908e9101, type: 3}
+  hexMap: []
+  entities: []

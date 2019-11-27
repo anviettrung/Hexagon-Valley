@@ -10,15 +10,15 @@ public class PlayerInput : MonoBehaviour
 	public void Init(BoardEntity ent)
 	{
 		if (controlBoard != null) { 
-			for (int i = 0; i < player.board.hexMatrix.Count; i++)
-				player.board.hexMatrix[i].OnTouched.RemoveListener(Move);
+			for (int i = 0; i < player.board.hexMap.Count; i++)
+				player.board.hexMap[i].OnTouched.RemoveListener(Move);
 		}
 
 		player = ent;
 		controlBoard = ent.board;
 
-		for (int i = 1; i < controlBoard.hexMatrix.Count; i++) {
-			controlBoard.hexMatrix[i].OnTouched.AddListener(Move);
+		for (int i = 1; i < controlBoard.hexMap.Count; i++) {
+			controlBoard.hexMap[i].OnTouched.AddListener(Move);
 		}
 
 		ChangeHexpointStateAroundPosition(player.positionInBoard, HexPoint.State.CAN_BE_SELECT);
@@ -26,7 +26,7 @@ public class PlayerInput : MonoBehaviour
 
 	private void Move(int x, int y)
 	{
-		if (controlBoard.Distance(new Vector2Int(x, y), player.positionInBoard) == 1) {
+		if (controlBoard.GetPoint(x, y).state == HexPoint.State.CAN_BE_SELECT) {
 			Vector2Int startPos = player.positionInBoard;
 			if (player.MoveToPoint(x, y) == true) {
 				ChangeHexpointStateAroundPosition(startPos, HexPoint.State.NORMAL);

@@ -4,31 +4,39 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-	public Board boardModel;
+	public Board modelBoard;
 	public GameObject playerCharacterModel;
 
 	public Vector2Int playerFirstPositionInBoard;
 
-	protected BoardEntity player;
+	[HideInInspector]
+	public BoardEntity player;
 	protected PlayerInput playerInput;
+	protected Board controlBoard;
 
 	void Awake()
 	{
 		playerInput = GetComponent<PlayerInput>();
-		boardModel.NewBoard();
+		controlBoard = Instantiate(modelBoard.gameObject).GetComponent<Board>();
 	}
-
 
 	private void Start()
 	{
 		player = Instantiate(playerCharacterModel).GetComponent<BoardEntity>();
-		boardModel.AddEntity(player, playerFirstPositionInBoard);
+		player.OnDead.AddListener(RestartUIPopUp);
+		controlBoard.AddEntity(player, playerFirstPositionInBoard);
 		playerInput.Init(player);
 
 		SnakeAI[] snakes = GameObject.FindObjectsOfType<SnakeAI>();
 		for (int i=0; i < snakes.Length; i++) {
-			boardModel.AddEntity(snakes[i].body);
+			controlBoard.AddEntity(snakes[i].body);
 			snakes[i].StartHunting(player);
 		}
+
+	}
+
+	void RestartUIPopUp()
+	{
+		Debug.Log("Restart UI Pop Up");
 	}
 }

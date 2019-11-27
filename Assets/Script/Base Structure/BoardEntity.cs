@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Movable))]
 public class BoardEntity : MonoBehaviour
@@ -10,6 +11,7 @@ public class BoardEntity : MonoBehaviour
 	public float moveTime;
 
 	public Vector2IntEvent OnMoving = new Vector2IntEvent();
+	public UnityEvent OnDead = new UnityEvent();
 
 	[HideInInspector]
 	public Movable mover;
@@ -34,5 +36,11 @@ public class BoardEntity : MonoBehaviour
 		mover.MoveTo(point.worldPosition, moveTime);
 
 		return true;
+	}
+
+	public void Kill()
+	{
+		OnDead.Invoke();
+		gameObject.SetActive(false); 
 	}
 }

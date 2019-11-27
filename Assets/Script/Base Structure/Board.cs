@@ -10,7 +10,7 @@ public class Board : MonoBehaviour
 	public HexPoint hexPointModel;
 
 	[HideInInspector]
-	public List<HexPoint> hexMatrix = new List<HexPoint>();
+	public List<HexPoint> hexMap = new List<HexPoint>();
 	public List<BoardEntity> entities = new List<BoardEntity>();
 
 	/// <summary>
@@ -20,12 +20,12 @@ public class Board : MonoBehaviour
 	/// <param name="h">The height.</param>
 	public void NewBoard(int w, int h)
 	{
-		hexMatrix.Clear();
+		hexMap.Clear();
 
 		width  = w;
 		height = h;
 
-		hexMatrix = new List<HexPoint>(width * height);
+		hexMap = new List<HexPoint>(width * height);
 
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
@@ -34,11 +34,11 @@ public class Board : MonoBehaviour
 				point.SetParentBoard(this);
 				point.SetPoint(j, i);
 
-				hexMatrix.Add(point);
+				hexMap.Add(point);
 			}
 		}
 
-		hexMatrix.TrimExcess();
+		hexMap.TrimExcess();
 	}
 
 	/// <summary>
@@ -64,8 +64,8 @@ public class Board : MonoBehaviour
 
 		int index = x + y * width;
 
-		if (index < hexMatrix.Count)
-			return hexMatrix[index];
+		if (index < hexMap.Count)
+			return hexMap[index];
 			
 		return null;
 	}

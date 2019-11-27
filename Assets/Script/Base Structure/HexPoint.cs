@@ -21,7 +21,7 @@ public class HexPoint : MonoBehaviour
 	{
 		anim = GetComponent<Animator>();
 		spriteRenderer = GetComponent<SpriteRenderer>();
-		ChangeStateTo(State.NORMAL);
+		ChangeStateTo(state);
 	}
 
 	public void SetPoint(int x, int y)
@@ -56,7 +56,7 @@ public class HexPoint : MonoBehaviour
 		return parentBoard.Distance(positionInBoard, targetPoint);
 	}
 
-	void ToggleVisible()
+	public void ToggleState()
 	{
 		if (state == State.NORMAL)
 			ChangeStateTo(State.WIREFRAME);
