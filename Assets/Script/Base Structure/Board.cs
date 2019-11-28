@@ -8,9 +8,10 @@ public class Board : MonoBehaviour
 	public int height;
 	public float twoPointDistance;
 	public HexPoint hexPointModel;
+	public Edge edgeModel;
 
-	[HideInInspector]
-	public List<HexPoint> hexMap = new List<HexPoint>();
+	public List<HexPoint> hexPoints = new List<HexPoint>();
+	public List<Edge> edges = new List<Edge>();
 	public List<BoardEntity> entities = new List<BoardEntity>();
 
 	/// <summary>
@@ -20,12 +21,12 @@ public class Board : MonoBehaviour
 	/// <param name="h">The height.</param>
 	public void NewBoard(int w, int h)
 	{
-		hexMap.Clear();
+		hexPoints.Clear();
 
 		width  = w;
 		height = h;
 
-		hexMap = new List<HexPoint>(width * height);
+		hexPoints = new List<HexPoint>(width * height);
 
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
@@ -34,11 +35,11 @@ public class Board : MonoBehaviour
 				point.SetParentBoard(this);
 				point.SetPoint(j, i);
 
-				hexMap.Add(point);
+				hexPoints.Add(point);
 			}
 		}
 
-		hexMap.TrimExcess();
+		hexPoints.TrimExcess();
 	}
 
 	/// <summary>
@@ -64,8 +65,8 @@ public class Board : MonoBehaviour
 
 		int index = x + y * width;
 
-		if (index < hexMap.Count)
-			return hexMap[index];
+		if (index < hexPoints.Count)
+			return hexPoints[index];
 			
 		return null;
 	}
@@ -117,6 +118,43 @@ public class Board : MonoBehaviour
 	public bool AddEntity(BoardEntity ent)
 	{
 		return AddEntity(ent, ent.positionInBoard.x, ent.positionInBoard.y);
+	}
+
+	public Edge AddEdge(Vector2Int a, Vector2Int b)
+	{
+		if (a == b)
+			return null;
+
+		HexPoint pa = GetPoint(a);
+		HexPoint pb = GetPoint(b);
+
+		if (pa == null || pb == null)
+			return null;
+
+		if (Distance(a, b) != 1)
+			return null;
+
+		if (FindEdgeBetween(pa, pb) != null)
+			return null;
+
+		Edge e = Instantiate(edgeModel.gameObject).GetComponent<Edge>();
+
+		e.SetParentBoard(this);
+		e.SetLink(GetPoint(a), GetPoint(b));
+
+		edges.Add(e);
+
+		return e;
+	}
+
+	protected Edge FindEdgeBetween(HexPoint a, HexPoint b)
+	{
+		for (int i = 0; i < edges.Count; i ++) {
+			if (edges[i].IsLinkBetween(a, b))
+				return edges[i];
+		}
+
+		return null;
 	}
 
 	public int Distance(Vector2Int pointA, Vector2Int pointB)

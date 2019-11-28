@@ -11,13 +11,20 @@ public class HexPoint : MonoBehaviour
 
 	public State state;
 
-	public bool canWalk;
+	public bool canStay;
+	public byte[] edges = new byte[6];
 
 	[HideInInspector]
 	public Vector2IntEvent OnTouched = new Vector2IntEvent();
 
 	private SpriteRenderer spriteRenderer;
 	private Animator anim;
+
+	public HexPoint() {
+		for (int i = 0; i < edges.Length; i++) {
+			edges[i] = 0;
+		}
+	}
 
 	private void Awake()
 	{
@@ -88,9 +95,9 @@ public class HexPoint : MonoBehaviour
 		state = s;
 		anim.SetInteger("StateCode", (int)s);
 		if (state == State.WIREFRAME)
-			canWalk = false;
+			canStay = false;
 		else
-			canWalk = true;
+			canStay = true;
 	}
 
 	public enum State

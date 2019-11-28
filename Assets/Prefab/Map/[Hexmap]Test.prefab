@@ -50,8 +50,9 @@ MonoBehaviour:
   positionInBoard: {x: 6, y: 6}
   worldPosition: {x: 3, y: -5.196}
   parentBoard: {fileID: 7697599366397537437}
-  state: 1
-  canWalk: 0
+  state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -94,7 +95,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.22745098, g: 0.34901962, b: 0.5882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -142,7 +143,7 @@ SpriteMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84791377096554212}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -253,7 +254,8 @@ MonoBehaviour:
   worldPosition: {x: 5, y: -1.732}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -455,7 +457,8 @@ MonoBehaviour:
   worldPosition: {x: 5, y: -6.928}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -657,7 +660,8 @@ MonoBehaviour:
   worldPosition: {x: 0.5, y: -6.062}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -859,7 +863,8 @@ MonoBehaviour:
   worldPosition: {x: 7.5, y: -2.598}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -902,7 +907,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1061,7 +1066,8 @@ MonoBehaviour:
   worldPosition: {x: -1.5, y: -4.33}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -1104,7 +1110,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1263,7 +1269,8 @@ MonoBehaviour:
   worldPosition: {x: -1, y: -1.732}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -1306,7 +1313,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1465,7 +1472,8 @@ MonoBehaviour:
   worldPosition: {x: -0.5, y: -2.598}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -1508,7 +1516,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1666,8 +1674,9 @@ MonoBehaviour:
   positionInBoard: {x: 8, y: 8}
   worldPosition: {x: 4, y: -6.928}
   parentBoard: {fileID: 7697599366397537437}
-  state: 1
-  canWalk: 0
+  state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -1710,7 +1719,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.22745098, g: 0.34901962, b: 0.5882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1758,7 +1767,7 @@ SpriteMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736880375226930348}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1869,7 +1878,8 @@ MonoBehaviour:
   worldPosition: {x: -1, y: -5.196}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -1912,7 +1922,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2071,7 +2081,8 @@ MonoBehaviour:
   worldPosition: {x: 0, y: -1.732}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -2273,7 +2284,8 @@ MonoBehaviour:
   worldPosition: {x: 4, y: -1.732}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -2316,7 +2328,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2475,7 +2487,8 @@ MonoBehaviour:
   worldPosition: {x: 8.5, y: -0.866}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -2518,7 +2531,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2677,7 +2690,8 @@ MonoBehaviour:
   worldPosition: {x: 5.5, y: -2.598}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -2720,7 +2734,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2878,8 +2892,9 @@ MonoBehaviour:
   positionInBoard: {x: 5, y: 6}
   worldPosition: {x: 2, y: -5.196}
   parentBoard: {fileID: 7697599366397537437}
-  state: 1
-  canWalk: 0
+  state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -2922,7 +2937,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.22745098, g: 0.34901962, b: 0.5882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2970,7 +2985,7 @@ SpriteMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1099972703697529071}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3081,7 +3096,8 @@ MonoBehaviour:
   worldPosition: {x: 4.5, y: -2.598}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -3283,7 +3299,8 @@ MonoBehaviour:
   worldPosition: {x: 4.5, y: -6.062}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -3484,8 +3501,9 @@ MonoBehaviour:
   positionInBoard: {x: 6, y: 8}
   worldPosition: {x: 2, y: -6.928}
   parentBoard: {fileID: 7697599366397537437}
-  state: 1
-  canWalk: 0
+  state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -3528,7 +3546,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.22745098, g: 0.34901962, b: 0.5882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3576,7 +3594,7 @@ SpriteMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753842979339181163}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3687,7 +3705,8 @@ MonoBehaviour:
   worldPosition: {x: 3, y: 0}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -3889,7 +3908,8 @@ MonoBehaviour:
   worldPosition: {x: 2, y: -3.464}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -3932,7 +3952,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4091,7 +4111,8 @@ MonoBehaviour:
   worldPosition: {x: 4, y: 0}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -4293,7 +4314,8 @@ MonoBehaviour:
   worldPosition: {x: -2, y: -5.196}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -4336,7 +4358,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4495,7 +4517,8 @@ MonoBehaviour:
   worldPosition: {x: 5.5, y: -0.866}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -4538,7 +4561,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4697,7 +4720,8 @@ MonoBehaviour:
   worldPosition: {x: 5.5, y: -6.062}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -4740,7 +4764,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4899,7 +4923,8 @@ MonoBehaviour:
   worldPosition: {x: -0.5, y: -6.062}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -4942,7 +4967,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5101,7 +5126,8 @@ MonoBehaviour:
   worldPosition: {x: 0.5, y: -4.33}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -5303,7 +5329,8 @@ MonoBehaviour:
   worldPosition: {x: 2.5, y: -0.866}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -5505,7 +5532,8 @@ MonoBehaviour:
   worldPosition: {x: 4.5, y: -7.794}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -5707,7 +5735,8 @@ MonoBehaviour:
   worldPosition: {x: -1.5, y: -2.598}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -5750,7 +5779,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5909,7 +5938,8 @@ MonoBehaviour:
   worldPosition: {x: -2, y: -3.464}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -5952,7 +5982,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6111,7 +6141,8 @@ MonoBehaviour:
   worldPosition: {x: 4, y: -5.196}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -6313,7 +6344,8 @@ MonoBehaviour:
   worldPosition: {x: -1, y: -6.928}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -6356,7 +6388,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6515,7 +6547,8 @@ MonoBehaviour:
   worldPosition: {x: -3.5, y: -6.062}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -6558,7 +6591,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6717,7 +6750,8 @@ MonoBehaviour:
   worldPosition: {x: 7, y: -1.732}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -6760,7 +6794,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6919,7 +6953,8 @@ MonoBehaviour:
   worldPosition: {x: 4, y: -3.464}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -6962,7 +6997,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7121,7 +7156,8 @@ MonoBehaviour:
   worldPosition: {x: -0.5, y: -0.866}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 010000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -7164,7 +7200,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7323,7 +7359,8 @@ MonoBehaviour:
   worldPosition: {x: 3.5, y: -7.794}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -7525,7 +7562,8 @@ MonoBehaviour:
   worldPosition: {x: 1.5, y: -7.794}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -7727,7 +7765,8 @@ MonoBehaviour:
   worldPosition: {x: 3.5, y: -0.866}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -7770,7 +7809,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7929,7 +7968,8 @@ MonoBehaviour:
   worldPosition: {x: 5, y: 0}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -8131,7 +8171,8 @@ MonoBehaviour:
   worldPosition: {x: 5, y: -5.196}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -8333,7 +8374,8 @@ MonoBehaviour:
   worldPosition: {x: -1.5, y: -6.062}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -8376,7 +8418,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8535,7 +8577,8 @@ MonoBehaviour:
   worldPosition: {x: 1.5, y: -6.062}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -8737,7 +8780,8 @@ MonoBehaviour:
   worldPosition: {x: 6.5, y: -4.33}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -8780,7 +8824,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8939,7 +8983,8 @@ MonoBehaviour:
   worldPosition: {x: 6.5, y: -2.598}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -8982,7 +9027,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9141,7 +9186,8 @@ MonoBehaviour:
   worldPosition: {x: 2.5, y: -7.794}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -9342,8 +9388,9 @@ MonoBehaviour:
   positionInBoard: {x: 7, y: 4}
   worldPosition: {x: 5, y: -3.464}
   parentBoard: {fileID: 7697599366397537437}
-  state: 1
-  canWalk: 0
+  state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -9386,7 +9433,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.22745098, g: 0.34901962, b: 0.5882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9434,7 +9481,7 @@ SpriteMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4072446195651159422}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -9544,8 +9591,9 @@ MonoBehaviour:
   positionInBoard: {x: 4, y: 5}
   worldPosition: {x: 1.5, y: -4.33}
   parentBoard: {fileID: 7697599366397537437}
-  state: 1
-  canWalk: 0
+  state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -9588,7 +9636,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.22745098, g: 0.34901962, b: 0.5882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9636,7 +9684,7 @@ SpriteMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4092487304300573816}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -9747,7 +9795,8 @@ MonoBehaviour:
   worldPosition: {x: -1, y: -3.464}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -9790,7 +9839,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9949,7 +9998,8 @@ MonoBehaviour:
   worldPosition: {x: 0.5, y: -2.598}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -10248,7 +10298,9 @@ MonoBehaviour:
   twoPointDistance: 1
   hexPointModel: {fileID: 3046106894108462097, guid: 7ef0e94292f684d099376d25908e9101,
     type: 3}
-  hexMap:
+  edgeModel: {fileID: 408894642081440973, guid: a87dde177b5024d02a03a14779230177,
+    type: 3}
+  hexPoints:
   - {fileID: 7989393055454399959}
   - {fileID: 1488453732044529147}
   - {fileID: 3648507448558286964}
@@ -10349,6 +10401,7 @@ MonoBehaviour:
   - {fileID: 8468891136369409558}
   - {fileID: 1901536731988309542}
   - {fileID: 6115075625157674796}
+  edges: []
   entities: []
 --- !u!1 &4597487029356539906
 GameObject:
@@ -10401,7 +10454,8 @@ MonoBehaviour:
   worldPosition: {x: 1.5, y: -2.598}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -10603,7 +10657,8 @@ MonoBehaviour:
   worldPosition: {x: -3, y: -5.196}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -10646,7 +10701,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10805,7 +10860,8 @@ MonoBehaviour:
   worldPosition: {x: -3.5, y: -7.794}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -10848,7 +10904,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11007,7 +11063,8 @@ MonoBehaviour:
   worldPosition: {x: 1.5, y: -0.866}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -11208,8 +11265,9 @@ MonoBehaviour:
   positionInBoard: {x: 0, y: 0}
   worldPosition: {x: 0, y: 0}
   parentBoard: {fileID: 7697599366397537437}
-  state: 1
-  canWalk: 0
+  state: 0
+  canStay: 1
+  edges: 000000010000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -11252,7 +11310,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.22745098, g: 0.34901962, b: 0.5882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11300,7 +11358,7 @@ SpriteMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4754778944186473712}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -11411,7 +11469,8 @@ MonoBehaviour:
   worldPosition: {x: 7.5, y: -0.866}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -11454,7 +11513,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11613,7 +11672,8 @@ MonoBehaviour:
   worldPosition: {x: 4.5, y: -4.33}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -11814,8 +11874,9 @@ MonoBehaviour:
   positionInBoard: {x: 6, y: 7}
   worldPosition: {x: 2.5, y: -6.062}
   parentBoard: {fileID: 7697599366397537437}
-  state: 0
-  canWalk: 1
+  state: 1
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -11858,7 +11919,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0.22745098, g: 0.34901962, b: 0.5882353, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11906,7 +11967,7 @@ SpriteMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5017396534574937144}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -12017,7 +12078,8 @@ MonoBehaviour:
   worldPosition: {x: 6, y: 0}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -12060,7 +12122,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12219,7 +12281,8 @@ MonoBehaviour:
   worldPosition: {x: 8, y: -1.732}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -12262,7 +12325,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12421,7 +12484,8 @@ MonoBehaviour:
   worldPosition: {x: 1, y: 0}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -12623,7 +12687,8 @@ MonoBehaviour:
   worldPosition: {x: 7, y: 0}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -12666,7 +12731,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12825,7 +12890,8 @@ MonoBehaviour:
   worldPosition: {x: -2.5, y: -7.794}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -12868,7 +12934,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13027,7 +13093,8 @@ MonoBehaviour:
   worldPosition: {x: 4.5, y: -0.866}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -13229,7 +13296,8 @@ MonoBehaviour:
   worldPosition: {x: 0.5, y: -0.866}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -13431,7 +13499,8 @@ MonoBehaviour:
   worldPosition: {x: 3, y: -3.464}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -13474,7 +13543,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13632,8 +13701,9 @@ MonoBehaviour:
   positionInBoard: {x: 5, y: 8}
   worldPosition: {x: 1, y: -6.928}
   parentBoard: {fileID: 7697599366397537437}
-  state: 1
-  canWalk: 0
+  state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -13676,7 +13746,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.22745098, g: 0.34901962, b: 0.5882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13724,7 +13794,7 @@ SpriteMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5864907532851569773}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -13835,7 +13905,8 @@ MonoBehaviour:
   worldPosition: {x: 6.5, y: -0.866}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -13878,7 +13949,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14036,8 +14107,9 @@ MonoBehaviour:
   positionInBoard: {x: 7, y: 7}
   worldPosition: {x: 3.5, y: -6.062}
   parentBoard: {fileID: 7697599366397537437}
-  state: 0
-  canWalk: 1
+  state: 1
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -14080,7 +14152,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0.22745098, g: 0.34901962, b: 0.5882353, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14128,7 +14200,7 @@ SpriteMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5936849188945084980}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -14239,7 +14311,8 @@ MonoBehaviour:
   worldPosition: {x: 0, y: -6.928}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -14441,7 +14514,8 @@ MonoBehaviour:
   worldPosition: {x: -2.5, y: -6.062}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -14484,7 +14558,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14643,7 +14717,8 @@ MonoBehaviour:
   worldPosition: {x: -4, y: -6.928}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -14686,7 +14761,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14845,7 +14920,8 @@ MonoBehaviour:
   worldPosition: {x: 1, y: -1.732}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -15047,7 +15123,8 @@ MonoBehaviour:
   worldPosition: {x: 3.5, y: -2.598}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -15249,7 +15326,8 @@ MonoBehaviour:
   worldPosition: {x: -0.5, y: -4.33}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -15292,7 +15370,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15451,7 +15529,8 @@ MonoBehaviour:
   worldPosition: {x: 3, y: -6.928}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -15494,7 +15573,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15653,7 +15732,8 @@ MonoBehaviour:
   worldPosition: {x: -0.5, y: -7.794}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -15696,7 +15776,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15855,7 +15935,8 @@ MonoBehaviour:
   worldPosition: {x: 5.5, y: -4.33}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -15898,7 +15979,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16057,7 +16138,8 @@ MonoBehaviour:
   worldPosition: {x: 6, y: -1.732}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -16100,7 +16182,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16259,7 +16341,8 @@ MonoBehaviour:
   worldPosition: {x: 2.5, y: -2.598}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -16461,7 +16544,8 @@ MonoBehaviour:
   worldPosition: {x: -2, y: -6.928}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -16504,7 +16588,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16663,7 +16747,8 @@ MonoBehaviour:
   worldPosition: {x: 7, y: -3.464}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -16706,7 +16791,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16865,7 +16950,8 @@ MonoBehaviour:
   worldPosition: {x: 1, y: -5.196}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -17067,7 +17153,8 @@ MonoBehaviour:
   worldPosition: {x: -1.5, y: -7.794}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -17110,7 +17197,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17269,7 +17356,8 @@ MonoBehaviour:
   worldPosition: {x: 8, y: 0}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -17312,7 +17400,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17471,7 +17559,8 @@ MonoBehaviour:
   worldPosition: {x: -4.5, y: -7.794}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -17514,7 +17603,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17673,7 +17762,8 @@ MonoBehaviour:
   worldPosition: {x: 1, y: -3.464}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -17716,7 +17806,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17875,7 +17965,8 @@ MonoBehaviour:
   worldPosition: {x: 0.5, y: -7.794}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -18076,8 +18167,9 @@ MonoBehaviour:
   positionInBoard: {x: 6, y: 5}
   worldPosition: {x: 3.5, y: -4.33}
   parentBoard: {fileID: 7697599366397537437}
-  state: 1
-  canWalk: 0
+  state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -18120,7 +18212,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.22745098, g: 0.34901962, b: 0.5882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -18168,7 +18260,7 @@ SpriteMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7980525567185824116}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -18279,7 +18371,8 @@ MonoBehaviour:
   worldPosition: {x: 6, y: -3.464}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -18322,7 +18415,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -18480,8 +18573,9 @@ MonoBehaviour:
   positionInBoard: {x: 5, y: 5}
   worldPosition: {x: 2.5, y: -4.33}
   parentBoard: {fileID: 7697599366397537437}
-  state: 1
-  canWalk: 0
+  state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -18524,7 +18618,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.22745098, g: 0.34901962, b: 0.5882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -18572,7 +18666,7 @@ SpriteMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8074742966185465956}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -18683,7 +18777,8 @@ MonoBehaviour:
   worldPosition: {x: -2.5, y: -4.33}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -18726,7 +18821,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -18885,7 +18980,8 @@ MonoBehaviour:
   worldPosition: {x: 2, y: 0}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -19087,7 +19183,8 @@ MonoBehaviour:
   worldPosition: {x: 0, y: -5.196}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -19289,7 +19386,8 @@ MonoBehaviour:
   worldPosition: {x: 0, y: -3.464}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -19332,7 +19430,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19491,7 +19589,8 @@ MonoBehaviour:
   worldPosition: {x: -3, y: -6.928}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -19534,7 +19633,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19693,7 +19792,8 @@ MonoBehaviour:
   worldPosition: {x: 3, y: -1.732}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -19736,7 +19836,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19895,7 +19995,8 @@ MonoBehaviour:
   worldPosition: {x: 2, y: -1.732}
   parentBoard: {fileID: 7697599366397537437}
   state: 0
-  canWalk: 1
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -20097,7 +20198,8 @@ MonoBehaviour:
   worldPosition: {x: 6, y: -5.196}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -20140,7 +20242,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -20299,7 +20401,8 @@ MonoBehaviour:
   worldPosition: {x: 9, y: 0}
   parentBoard: {fileID: 7697599366397537437}
   state: 1
-  canWalk: 0
+  canStay: 0
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -20342,7 +20445,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 336c5a2cc86c741af96b544767164236, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

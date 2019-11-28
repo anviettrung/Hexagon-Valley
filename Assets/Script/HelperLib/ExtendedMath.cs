@@ -24,9 +24,28 @@ public static class ExdMath {
 		new Vector2Int(-1, -1)
 	};
 
+	public static readonly Vector3[] ROTATION_SIX = {
+		new Vector3(0, 0, 60),
+		new Vector3(0, 0, 0),
+		new Vector3(0, 0, -60),
+		new Vector3(0, 0, -120),
+		new Vector3(0, 0, 180),
+		new Vector3(0, 0, 120)
+	};
+
 	public static float SignedAngle(Vector2 vec1, Vector2 vec2) {
 		int signed = 1;
 		if (Vector3.Cross(vec1, vec2).z < 0) signed = -1;
 		return signed * Vector3.Angle(vec1, vec2);
+	}
+
+	public static int FindInDirectionSix(Vector2Int v)
+	{
+		for (int i = 0; i < 6; i++)
+			if (v == ExdMath.DIRECTION_SIX[i])
+				return i;
+	
+
+		return -1; // not found
 	}
 }

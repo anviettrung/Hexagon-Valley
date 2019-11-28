@@ -10,8 +10,8 @@ public class PlayerInput : MonoBehaviour
 	public void Init(BoardEntity ent)
 	{
 		if (controlBoard != null) { 
-			for (int i = 0; i < player.board.hexMap.Count; i++)
-				player.board.hexMap[i].OnTouched.RemoveListener(Move);
+			for (int i = 0; i < player.board.hexPoints.Count; i++)
+				player.board.hexPoints[i].OnTouched.RemoveListener(Move);
 		}
 
 		player = ent;
@@ -19,8 +19,8 @@ public class PlayerInput : MonoBehaviour
 		player.OnStartMovingFrom.AddListener(OnStartMoving);
 		player.OnMoveDone.AddListener(OnMoveDone);
 
-		for (int i = 1; i < controlBoard.hexMap.Count; i++) {
-			controlBoard.hexMap[i].OnTouched.AddListener(Move);
+		for (int i = 1; i < controlBoard.hexPoints.Count; i++) {
+			controlBoard.hexPoints[i].OnTouched.AddListener(Move);
 		}
 
 		ChangeHexpointStateAroundPosition(player.positionInBoard, HexPoint.State.CAN_BE_SELECT);
@@ -38,8 +38,13 @@ public class PlayerInput : MonoBehaviour
 	{
 		for (int i = 0; i < ExdMath.DIRECTION_SIX.Length; i++) {
 			HexPoint p = controlBoard.GetPoint(pos + ExdMath.DIRECTION_SIX[i]);
-			if (p != null)
-				p.ChangeStateTo(state);
+			if (p == null)
+				continue;
+
+			if (state == HexPoint.State.CAN_BE_SELECT && p.edges[(i+3) % 6] == 1)
+				continue;
+
+			p.ChangeStateTo(state);
 		}
 	}
 

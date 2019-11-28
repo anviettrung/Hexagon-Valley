@@ -51,6 +51,8 @@ MonoBehaviour:
   worldPosition: {x: 5.5, y: -0.866}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -252,6 +254,8 @@ MonoBehaviour:
   worldPosition: {x: -1.5, y: -4.33}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -453,6 +457,8 @@ MonoBehaviour:
   worldPosition: {x: 0.5, y: -6.062}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -654,6 +660,8 @@ MonoBehaviour:
   worldPosition: {x: 6, y: -3.464}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -855,6 +863,8 @@ MonoBehaviour:
   worldPosition: {x: 7, y: -3.464}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -1056,6 +1066,8 @@ MonoBehaviour:
   worldPosition: {x: -2.5, y: -7.794}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -1354,7 +1366,9 @@ MonoBehaviour:
   twoPointDistance: 1
   hexPointModel: {fileID: 3046106894108462097, guid: 7ef0e94292f684d099376d25908e9101,
     type: 3}
-  hexMap:
+  edgeModel: {fileID: 408894642081440973, guid: a87dde177b5024d02a03a14779230177,
+    type: 3}
+  hexPoints:
   - {fileID: 329883184953385352}
   - {fileID: 6937041497738782322}
   - {fileID: 7549203934969669711}
@@ -1455,6 +1469,7 @@ MonoBehaviour:
   - {fileID: 544518377571195926}
   - {fileID: 8514781742004039789}
   - {fileID: 9076269533352874389}
+  edges: []
   entities: []
 --- !u!1 &1006017989065713929
 GameObject:
@@ -1507,6 +1522,8 @@ MonoBehaviour:
   worldPosition: {x: 1, y: -5.196}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -1708,6 +1725,8 @@ MonoBehaviour:
   worldPosition: {x: 1.5, y: -7.794}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -1909,6 +1928,8 @@ MonoBehaviour:
   worldPosition: {x: 6, y: -5.196}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -2110,6 +2131,8 @@ MonoBehaviour:
   worldPosition: {x: 1, y: -3.464}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -2311,6 +2334,8 @@ MonoBehaviour:
   worldPosition: {x: -1.5, y: -2.598}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -2512,6 +2537,8 @@ MonoBehaviour:
   worldPosition: {x: 4, y: -3.464}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -2713,6 +2740,8 @@ MonoBehaviour:
   worldPosition: {x: 3.5, y: -6.062}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -2914,6 +2943,8 @@ MonoBehaviour:
   worldPosition: {x: 7, y: 0}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -3115,6 +3146,8 @@ MonoBehaviour:
   worldPosition: {x: 2.5, y: -7.794}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -3316,6 +3349,8 @@ MonoBehaviour:
   worldPosition: {x: 0.5, y: -0.866}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -3517,6 +3552,8 @@ MonoBehaviour:
   worldPosition: {x: 3, y: -3.464}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -3718,6 +3755,8 @@ MonoBehaviour:
   worldPosition: {x: -4.5, y: -7.794}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -3919,6 +3958,8 @@ MonoBehaviour:
   worldPosition: {x: 4.5, y: -6.062}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -4120,6 +4161,8 @@ MonoBehaviour:
   worldPosition: {x: -2.5, y: -4.33}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -4321,6 +4364,8 @@ MonoBehaviour:
   worldPosition: {x: 3, y: 0}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -4522,6 +4567,8 @@ MonoBehaviour:
   worldPosition: {x: -2, y: -5.196}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -4723,6 +4770,8 @@ MonoBehaviour:
   worldPosition: {x: 6.5, y: -2.598}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -4924,6 +4973,8 @@ MonoBehaviour:
   worldPosition: {x: 4.5, y: -2.598}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -5125,6 +5176,8 @@ MonoBehaviour:
   worldPosition: {x: 4.5, y: -7.794}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -5326,6 +5379,8 @@ MonoBehaviour:
   worldPosition: {x: 6, y: -1.732}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -5527,6 +5582,8 @@ MonoBehaviour:
   worldPosition: {x: 5, y: -6.928}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -5728,6 +5785,8 @@ MonoBehaviour:
   worldPosition: {x: 2.5, y: -6.062}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -5929,6 +5988,8 @@ MonoBehaviour:
   worldPosition: {x: -0.5, y: -2.598}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -6130,6 +6191,8 @@ MonoBehaviour:
   worldPosition: {x: -3.5, y: -7.794}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -6331,6 +6394,8 @@ MonoBehaviour:
   worldPosition: {x: 2, y: -1.732}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -6532,6 +6597,8 @@ MonoBehaviour:
   worldPosition: {x: 0, y: -6.928}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -6733,6 +6800,8 @@ MonoBehaviour:
   worldPosition: {x: 3.5, y: -7.794}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -6934,6 +7003,8 @@ MonoBehaviour:
   worldPosition: {x: 5.5, y: -4.33}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -7135,6 +7206,8 @@ MonoBehaviour:
   worldPosition: {x: 6, y: 0}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -7336,6 +7409,8 @@ MonoBehaviour:
   worldPosition: {x: 7.5, y: -2.598}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -7537,6 +7612,8 @@ MonoBehaviour:
   worldPosition: {x: 0, y: -1.732}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -7738,6 +7815,8 @@ MonoBehaviour:
   worldPosition: {x: 1.5, y: -0.866}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -7939,6 +8018,8 @@ MonoBehaviour:
   worldPosition: {x: -1.5, y: -7.794}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -8140,6 +8221,8 @@ MonoBehaviour:
   worldPosition: {x: 0, y: -3.464}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -8341,6 +8424,8 @@ MonoBehaviour:
   worldPosition: {x: 5.5, y: -6.062}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -8542,6 +8627,8 @@ MonoBehaviour:
   worldPosition: {x: -1, y: -5.196}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -8743,6 +8830,8 @@ MonoBehaviour:
   worldPosition: {x: 3.5, y: -2.598}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -8944,6 +9033,8 @@ MonoBehaviour:
   worldPosition: {x: -1.5, y: -6.062}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -9145,6 +9236,8 @@ MonoBehaviour:
   worldPosition: {x: -0.5, y: -0.866}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -9346,6 +9439,8 @@ MonoBehaviour:
   worldPosition: {x: 2, y: -5.196}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -9547,6 +9642,8 @@ MonoBehaviour:
   worldPosition: {x: 6.5, y: -4.33}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -9748,6 +9845,8 @@ MonoBehaviour:
   worldPosition: {x: 8, y: -1.732}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -9949,6 +10048,8 @@ MonoBehaviour:
   worldPosition: {x: -2, y: -6.928}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -10150,6 +10251,8 @@ MonoBehaviour:
   worldPosition: {x: 2.5, y: -2.598}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -10351,6 +10454,8 @@ MonoBehaviour:
   worldPosition: {x: -1, y: -6.928}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -10552,6 +10657,8 @@ MonoBehaviour:
   worldPosition: {x: 1, y: -6.928}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -10753,6 +10860,8 @@ MonoBehaviour:
   worldPosition: {x: 4, y: -5.196}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -10954,6 +11063,8 @@ MonoBehaviour:
   worldPosition: {x: 5, y: 0}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -11155,6 +11266,8 @@ MonoBehaviour:
   worldPosition: {x: 6.5, y: -0.866}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -11356,6 +11469,8 @@ MonoBehaviour:
   worldPosition: {x: 3, y: -1.732}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -11557,6 +11672,8 @@ MonoBehaviour:
   worldPosition: {x: 8.5, y: -0.866}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -11758,6 +11875,8 @@ MonoBehaviour:
   worldPosition: {x: 0, y: -5.196}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -11959,6 +12078,8 @@ MonoBehaviour:
   worldPosition: {x: -1, y: -1.732}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -12160,6 +12281,8 @@ MonoBehaviour:
   worldPosition: {x: 2.5, y: -0.866}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -12361,6 +12484,8 @@ MonoBehaviour:
   worldPosition: {x: 2, y: -6.928}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -12562,6 +12687,8 @@ MonoBehaviour:
   worldPosition: {x: 3.5, y: -4.33}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -12763,6 +12890,8 @@ MonoBehaviour:
   worldPosition: {x: -0.5, y: -4.33}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -12964,6 +13093,8 @@ MonoBehaviour:
   worldPosition: {x: 5.5, y: -2.598}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -13165,6 +13296,8 @@ MonoBehaviour:
   worldPosition: {x: 7, y: -1.732}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -13366,6 +13499,8 @@ MonoBehaviour:
   worldPosition: {x: -3, y: -6.928}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -13567,6 +13702,8 @@ MonoBehaviour:
   worldPosition: {x: 1, y: -1.732}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -13768,6 +13905,8 @@ MonoBehaviour:
   worldPosition: {x: 3, y: -5.196}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -13969,6 +14108,8 @@ MonoBehaviour:
   worldPosition: {x: 1, y: 0}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -14170,6 +14311,8 @@ MonoBehaviour:
   worldPosition: {x: 1.5, y: -4.33}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -14371,6 +14514,8 @@ MonoBehaviour:
   worldPosition: {x: 2.5, y: -4.33}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -14572,6 +14717,8 @@ MonoBehaviour:
   worldPosition: {x: 5, y: -3.464}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -14773,6 +14920,8 @@ MonoBehaviour:
   worldPosition: {x: -2, y: -3.464}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -14974,6 +15123,8 @@ MonoBehaviour:
   worldPosition: {x: -1, y: -3.464}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -15175,6 +15326,8 @@ MonoBehaviour:
   worldPosition: {x: 4.5, y: -0.866}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -15376,6 +15529,8 @@ MonoBehaviour:
   worldPosition: {x: 0.5, y: -2.598}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -15577,6 +15732,8 @@ MonoBehaviour:
   worldPosition: {x: 1.5, y: -6.062}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -15778,6 +15935,8 @@ MonoBehaviour:
   worldPosition: {x: 2, y: -3.464}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -15979,6 +16138,8 @@ MonoBehaviour:
   worldPosition: {x: 5, y: -1.732}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -16180,6 +16341,8 @@ MonoBehaviour:
   worldPosition: {x: 3, y: -6.928}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -16381,6 +16544,8 @@ MonoBehaviour:
   worldPosition: {x: -0.5, y: -6.062}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -16582,6 +16747,8 @@ MonoBehaviour:
   worldPosition: {x: -4, y: -6.928}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -16783,6 +16950,8 @@ MonoBehaviour:
   worldPosition: {x: 1.5, y: -2.598}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -16984,6 +17153,8 @@ MonoBehaviour:
   worldPosition: {x: 5, y: -5.196}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -17185,6 +17356,8 @@ MonoBehaviour:
   worldPosition: {x: 7.5, y: -0.866}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -17386,6 +17559,8 @@ MonoBehaviour:
   worldPosition: {x: 0, y: 0}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -17587,6 +17762,8 @@ MonoBehaviour:
   worldPosition: {x: -3.5, y: -6.062}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -17788,6 +17965,8 @@ MonoBehaviour:
   worldPosition: {x: 4, y: 0}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -17989,6 +18168,8 @@ MonoBehaviour:
   worldPosition: {x: 2, y: 0}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -18190,6 +18371,8 @@ MonoBehaviour:
   worldPosition: {x: 9, y: 0}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -18391,6 +18574,8 @@ MonoBehaviour:
   worldPosition: {x: 4, y: -6.928}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -18592,6 +18777,8 @@ MonoBehaviour:
   worldPosition: {x: 0.5, y: -7.794}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -18793,6 +18980,8 @@ MonoBehaviour:
   worldPosition: {x: 0.5, y: -4.33}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -18994,6 +19183,8 @@ MonoBehaviour:
   worldPosition: {x: 3.5, y: -0.866}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -19195,6 +19386,8 @@ MonoBehaviour:
   worldPosition: {x: -0.5, y: -7.794}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -19396,6 +19589,8 @@ MonoBehaviour:
   worldPosition: {x: 4, y: -1.732}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -19597,6 +19792,8 @@ MonoBehaviour:
   worldPosition: {x: -3, y: -5.196}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -19798,6 +19995,8 @@ MonoBehaviour:
   worldPosition: {x: -2.5, y: -6.062}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -19999,6 +20198,8 @@ MonoBehaviour:
   worldPosition: {x: 8, y: 0}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []
@@ -20200,6 +20401,8 @@ MonoBehaviour:
   worldPosition: {x: 4.5, y: -4.33}
   parentBoard: {fileID: 8411992424255373598}
   state: 0
+  canStay: 1
+  edges: 000000000000
   OnTouched:
     m_PersistentCalls:
       m_Calls: []

@@ -154,7 +154,9 @@ MonoBehaviour:
   twoPointDistance: 1
   hexPointModel: {fileID: 3046106894108462097, guid: 7ef0e94292f684d099376d25908e9101,
     type: 3}
-  hexMap: []
+  edgeModel: {fileID: 0}
+  hexPoints: []
+  edges: []
   entities: []
 --- !u!4 &107610569
 Transform:
@@ -368,7 +370,7 @@ PrefabInstance:
     - target: {fileID: -7401061703246798748, guid: da25fe2029f1b4f6584b85d67013c875,
         type: 3}
       propertyPath: moveType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2932090841034929581, guid: da25fe2029f1b4f6584b85d67013c875,
         type: 3}

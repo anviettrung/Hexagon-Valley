@@ -33,7 +33,7 @@ public class SnakeAI : MonoBehaviour
 		HexPoint[] path;
 		int totalStep = body.board.Path(body.positionInBoard, target.positionInBoard, out path);
 		if (stepPerMove <= totalStep && moveType == MoveType.MoveType1) {
-			if (path[stepPerMove].canWalk)
+			if (path[stepPerMove].canStay)
 				body.MoveToPoint(path[stepPerMove].positionInBoard.x, path[stepPerMove].positionInBoard.y);
 		}
 		if (totalStep > 0 && moveType == MoveType.MoveType2) {
@@ -43,7 +43,7 @@ public class SnakeAI : MonoBehaviour
 			bool doMovement = true;
 			for (int i = 1; i <= stepPerMove; i++) {
 				des = body.positionInBoard + direct * i;
-				if (body.board.GetPoint(des).canWalk == false) {
+				if (body.board.GetPoint(des).canStay == false) {
 					doMovement = false;
 					break;
 				}
