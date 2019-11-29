@@ -47,7 +47,7 @@ public class Edge : MonoBehaviour
 	public void SetParentBoard(Board b)
 	{
 		parentBoard = b;
-		transform.SetParent(b.transform);
+		transform.SetParent(b.edgeHolder);
 	}
 
 	public void SetPositionInWorldCoordinate()

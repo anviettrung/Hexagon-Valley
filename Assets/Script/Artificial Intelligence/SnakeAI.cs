@@ -56,7 +56,7 @@ public class SnakeAI : MonoBehaviour
 		//}
 
 		int directIndex = 0;
-		Vector2 direct = body.board.GetPoint(x,y).worldPosition - (Vector2)body.transform.position;
+		Vector2 direct = body.parentBoard.GetPoint(x,y).worldPosition - (Vector2)body.transform.position;
 		float smallestAngle = Vector2.Angle(direct, ExdMath.DIRECTION_SIX_WORLD_COORD[0]);
 		for (int i = 1; i < 6; i++) {
 			float angle = Vector2.Angle(direct, ExdMath.DIRECTION_SIX_WORLD_COORD[i]);

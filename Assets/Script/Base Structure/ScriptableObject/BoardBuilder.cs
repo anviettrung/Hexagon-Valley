@@ -8,11 +8,19 @@ public class BoardBuilder : MonoBehaviour
 	public string mapName;
 	public Board mapDataToOpen;
 	public Board standardBoard;
+	public bool isEditingMap;
+	public List<BoardEntity> availableEntities;
+	public BoardEntity selectingEntity;
 
 	protected Board currentBoard;
 
 	public Vector2Int vecA;
 	public Vector2Int vecB;
+
+	private void Start()
+	{
+		OnChangeSelectingEntity(0);
+	}
 
 
 	public void NewMap()
@@ -35,17 +43,6 @@ public class BoardBuilder : MonoBehaviour
 
 		for (int i = 0; i < currentBoard.edges.Count; i++) {
 			currentBoard.edges[i].OnTouched.AddListener(OnClickEdge);
-		}
-	}
-
-	public void OnClickPoint(int x, int y)
-	{
-		HexPoint p =  currentBoard.GetPoint(x, y);
-		Debug.Log(p);
-		if (p.state == HexPoint.State.WIREFRAME) {
-			p.ForceChangeStateTo(HexPoint.State.NORMAL);
-		} else {
-			p.ForceChangeStateTo(HexPoint.State.WIREFRAME);
 		}
 	}
 
@@ -78,13 +75,55 @@ public class BoardBuilder : MonoBehaviour
 		}
 	}
 
+	public void SwitchEditMapMode(bool x)
+	{
+		isEditingMap = x;
+	}
+
+	public void OnChangeSelectingEntity(int x)
+	{
+		Debug.Log(x);
+		selectingEntity = availableEntities[x];
+	}
+
 	public void OnClickEdge(Edge e)
 	{
-		if (e.state == Edge.State.WIREFRAME) {
-			e.ForceChangeStateTo(Edge.State.NORMAL);
+		if (isEditingMap) {
+
+			if (e.state == Edge.State.WIREFRAME) {
+				e.ForceChangeStateTo(Edge.State.NORMAL);
+			} else {
+				e.ForceChangeStateTo(Edge.State.WIREFRAME);
+			}
+
 		} else {
-			e.ForceChangeStateTo(Edge.State.WIREFRAME);
+
 		}
+	}
+
+
+	public void OnClickPoint(int x, int y)
+	{
+		if (isEditingMap) {
+
+			HexPoint p = currentBoard.GetPoint(x, y);
+
+			if (p.state == HexPoint.State.WIREFRAME) {
+				p.ForceChangeStateTo(HexPoint.State.NORMAL);
+			} else {
+				p.ForceChangeStateTo(HexPoint.State.WIREFRAME);
+			}
+
+		} else {
+			BoardEntity ent = currentBoard.FindEntityAtPoint(currentBoard.GetPoint(x, y));
+			if (ent != null) {
+				currentBoard.RemoveEntity(ent);
+			} else {
+				ent = Instantiate(selectingEntity.gameObject).GetComponent<BoardEntity>();
+				currentBoard.AddEntity(ent, x, y);
+			}
+		}
+
 	}
 
 	public void Open()

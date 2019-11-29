@@ -10,6 +10,10 @@ public class Board : MonoBehaviour
 	public HexPoint hexPointModel;
 	public Edge edgeModel;
 
+	public Transform pointHolder;
+	public Transform edgeHolder;
+	public Transform entityHolder;
+
 	public List<HexPoint> hexPoints = new List<HexPoint>();
 	public List<Edge> edges = new List<Edge>();
 	public List<BoardEntity> entities = new List<BoardEntity>();
@@ -91,7 +95,7 @@ public class Board : MonoBehaviour
 	public bool AddEntity(BoardEntity ent, Vector2Int firstPos)
 	{
 		entities.Add(ent);
-		ent.board = this;
+		ent.SetParentBoard(this);
 		ent.positionInBoard = firstPos;
 		ent.transform.position = GetPoint(firstPos).worldPosition;
 
@@ -155,6 +159,24 @@ public class Board : MonoBehaviour
 		}
 
 		return null;
+	}
+
+	public BoardEntity FindEntityAtPoint(HexPoint point)
+	{
+		for (int i=0; i < entities.Count; i++) {
+			if (entities[i] != null) {
+				if (entities[i].positionInBoard == point.positionInBoard)
+					return entities[i];
+			}
+		}
+
+		return null;
+	}
+
+	public void RemoveEntity(BoardEntity ent)
+	{
+		entities.Remove(ent);
+		Destroy(ent.gameObject);
 	}
 
 	public int Distance(Vector2Int pointA, Vector2Int pointB)

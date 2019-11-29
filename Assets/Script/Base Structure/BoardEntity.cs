@@ -6,7 +6,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Movable))]
 public class BoardEntity : MonoBehaviour
 {
-	public Board board;
+	public Board parentBoard;
 	public Vector2Int positionInBoard;
 	public float moveTime;
 	public MovementFilter movementFilter = new MovementFilter();
@@ -26,6 +26,11 @@ public class BoardEntity : MonoBehaviour
 		mover = GetComponent<Movable>();
 	}
 
+	public void SetParentBoard(Board b)
+	{
+		parentBoard = b;
+		transform.SetParent(b.entityHolder);
+	}
 
 	// moveMode = 0: move exactly number or steps
 	// moveMode = 1: move as far as possible
@@ -34,7 +39,7 @@ public class BoardEntity : MonoBehaviour
 		if (mover.IsMoving)
 			return false;
 			
-		int pathLength = board.PathStraight(board.GetPoint(positionInBoard), direct, step, movementFilter, out path);
+		int pathLength = parentBoard.PathStraight(parentBoard.GetPoint(positionInBoard), direct, step, movementFilter, out path);
 		if (moveMode == 0) {
 			if (step <= pathLength)
 				return MoveToPoint(path[step].positionInBoard.x, path[step].positionInBoard.y);
@@ -57,7 +62,7 @@ public class BoardEntity : MonoBehaviour
 		if (mover.IsMoving)
 			return false;
 
-		HexPoint point = board.GetPoint(x, y);
+		HexPoint point = parentBoard.GetPoint(x, y);
 
 		if (point == null)
 			return false;

@@ -10,12 +10,12 @@ public class PlayerInput : MonoBehaviour
 	public void Init(BoardEntity ent)
 	{
 		if (controlBoard != null) { 
-			for (int i = 0; i < player.board.hexPoints.Count; i++)
-				player.board.hexPoints[i].OnTouched.RemoveListener(Move);
+			for (int i = 0; i < player.parentBoard.hexPoints.Count; i++)
+				player.parentBoard.hexPoints[i].OnTouched.RemoveListener(Move);
 		}
 
 		player = ent;
-		controlBoard = ent.board;
+		controlBoard = ent.parentBoard;
 		player.OnStartMovingFrom.AddListener(OnStartMoving);
 		player.OnMoveDone.AddListener(OnMoveDone);
 

@@ -46,7 +46,7 @@ public class HexPoint : MonoBehaviour
 	public void SetParentBoard(Board b)
 	{
 		parentBoard = b;
-		transform.SetParent(b.transform);
+		transform.SetParent(b.pointHolder);
 	}
 
 	public void SetPositionInWorldCoordinate()
