@@ -9,6 +9,7 @@ public class BoardEntity : MonoBehaviour
 	public Board board;
 	public Vector2Int positionInBoard;
 	public float moveTime;
+	public MovementFilter movementFilter = new MovementFilter();
 
 	public Vector2IntEvent OnStartMovingFrom = new Vector2IntEvent();
 	public Vector2IntEvent OnMoving = new Vector2IntEvent();
@@ -18,14 +19,42 @@ public class BoardEntity : MonoBehaviour
 	[HideInInspector]
 	public Movable mover;
 
+	protected HexPoint[] path = new HexPoint[16];
+
 	private void Awake()
 	{
 		mover = GetComponent<Movable>();
 	}
 
+
+	// moveMode = 0: move exactly number or steps
+	// moveMode = 1: move as far as possible
+	public bool MoveStraight(Vector2Int direct, int step, int moveMode)
+	{
+		if (mover.IsMoving)
+			return false;
+			
+		int pathLength = board.PathStraight(board.GetPoint(positionInBoard), direct, step, movementFilter, out path);
+		if (moveMode == 0) {
+			if (step <= pathLength)
+				return MoveToPoint(path[step].positionInBoard.x, path[step].positionInBoard.y);
+			else
+				return false;
+		}
+
+		if (moveMode == 1) {
+			if (step <= pathLength)
+				return MoveToPoint(path[step].positionInBoard.x, path[step].positionInBoard.y);
+			else if (pathLength > 0)
+				return MoveToPoint(path[pathLength].positionInBoard.x, path[pathLength].positionInBoard.y);
+		}
+
+		return true;
+	}
+
 	public bool MoveToPoint(int x, int y)
 	{
-		if (mover.isMoving)
+		if (mover.IsMoving)
 			return false;
 
 		HexPoint point = board.GetPoint(x, y);
@@ -34,9 +63,11 @@ public class BoardEntity : MonoBehaviour
 			return false;
 
 		OnStartMovingFrom.Invoke(positionInBoard.x, positionInBoard.y);
+
 		positionInBoard = point.positionInBoard;
 		OnMoving.Invoke(positionInBoard.x, positionInBoard.y);
-		mover.MoveTo(point, moveTime, OnMoving, OnMoveDone);
+
+		mover.MoveTo(point, moveTime, OnMoveDone);
 
 		return true;
 	}

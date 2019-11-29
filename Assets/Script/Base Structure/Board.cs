@@ -173,6 +173,37 @@ public class Board : MonoBehaviour
 		return d;
 	}
 
+	public int PathStraight(HexPoint startPoint, Vector2Int direct, int step, MovementFilter filter, out HexPoint[] path)
+	{
+		int pathLength = 0;
+		path = new HexPoint[step + 1];
+		path[0] = startPoint;
+
+		if (startPoint == null)
+			return pathLength; // Error
+
+		int k = ExdMath.FindInDirectionSix(direct);
+		if (k == -1) // Not exist this direct
+			return pathLength; // Error
+			
+
+		for (int res = 1; res <= step; res++) {
+			HexPoint nextPoint = GetPoint(path[res-1].positionInBoard + direct);
+			if (nextPoint == null)
+				return pathLength;
+			if (nextPoint.canStay == false)
+				return pathLength;
+			if (filter.walkthroughWall == false && path[res-1].edges[k] == 1)
+				return pathLength;
+
+			path[res] = nextPoint;
+			pathLength++;
+		}
+
+
+		return pathLength;
+	}
+
 	public int Path(Vector2Int startPos, Vector2Int endPos, out HexPoint[] path)
 	{
 		Vector2Int delta = endPos - startPos; // go correct direction

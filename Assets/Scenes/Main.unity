@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8829446cf862247a88602944b4e983f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelBoard: {fileID: 7697599366397537437, guid: 9f592d9a764a14b6fba4a876bf21bcf0,
+  modelBoard: {fileID: 2852915001747417894, guid: 4500a4b66d0104e1fa397952fd21979c,
     type: 3}
   playerCharacterModel: {fileID: 2574718777226782401, guid: b6c64a0ab740a43f8bd54d163c3e404f,
     type: 3}
@@ -348,7 +348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030113199}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5452985, y: -0.76555294, z: -10.122913}
+  m_LocalPosition: {x: 2.53, y: -5.15, z: -10.122913}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 888319252}
@@ -370,7 +370,7 @@ PrefabInstance:
     - target: {fileID: -7401061703246798748, guid: da25fe2029f1b4f6584b85d67013c875,
         type: 3}
       propertyPath: moveType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2932090841034929581, guid: da25fe2029f1b4f6584b85d67013c875,
         type: 3}

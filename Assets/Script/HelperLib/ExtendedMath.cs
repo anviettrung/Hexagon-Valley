@@ -24,6 +24,15 @@ public static class ExdMath {
 		new Vector2Int(-1, -1)
 	};
 
+	public static readonly Vector2[] DIRECTION_SIX_WORLD_COORD = {
+		new Vector2(COS60, SIN60),
+		new Vector2(1, 0),
+		new Vector2(COS60, -SIN60),
+		new Vector2(-COS60, -SIN60),
+		new Vector2(-1, 0),
+		new Vector2(-1, SIN60)
+	};
+
 	public static readonly Vector3[] ROTATION_SIX = {
 		new Vector3(0, 0, 60),
 		new Vector3(0, 0, 0),

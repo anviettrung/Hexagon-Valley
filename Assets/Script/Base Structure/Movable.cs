@@ -5,21 +5,26 @@ using UnityEngine.Events;
 
 public class Movable : MonoBehaviour
 {
-	public bool isMoving = false;
+	protected bool isMoving;
+	public bool IsMoving {
+		get {
+			return isMoving;
+		}
+	}
+
+	public void MoveTo(HexPoint destination, float time, Vector2IntEvent moveDoneCallback)
+	{
+		if (isMoving == false)
+			StartCoroutine(moveTo(destination, time, moveDoneCallback));
+	}
 
 	public void MoveTo(HexPoint destination, float time)
 	{
 		if (isMoving == false)
-			StartCoroutine(moveTo(destination, time, null, null));
+			StartCoroutine(moveTo(destination, time, null));
 	}
 
-	public void MoveTo(HexPoint destination, float time, Vector2IntEvent onMovingCallback, Vector2IntEvent onMoveDoneCallback)
-	{
-		if (isMoving == false)
-			StartCoroutine(moveTo(destination, time, onMoveDoneCallback, onMoveDoneCallback));
-	}
-
-	protected IEnumerator moveTo(HexPoint destination, float time, Vector2IntEvent onMovingCallback, Vector2IntEvent onMoveDoneCallback)
+	protected IEnumerator moveTo(HexPoint destination, float time, Vector2IntEvent moveDoneCallback)
 	{
 		isMoving = true;
 
@@ -33,8 +38,8 @@ public class Movable : MonoBehaviour
 			yield return new WaitForFixedUpdate();	 
 		}
 
-		if (onMoveDoneCallback != null)
-			onMoveDoneCallback.Invoke(destination.positionInBoard.x, destination.positionInBoard.y);
+		if (moveDoneCallback != null)
+			moveDoneCallback.Invoke(destination.positionInBoard.x, destination.positionInBoard.y);
 
 		isMoving = false;
 	}
