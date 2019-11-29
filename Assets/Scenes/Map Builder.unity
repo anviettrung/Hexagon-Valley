@@ -986,7 +986,7 @@ MonoBehaviour:
     m_Options:
     - m_Text: Snake
       m_Image: {fileID: 0}
-    - m_Text: Snake
+    - m_Text: Goal Door
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1388,6 +1388,7 @@ MonoBehaviour:
   isEditingMap: 1
   availableEntities:
   - {fileID: 2932090841034929581, guid: da25fe2029f1b4f6584b85d67013c875, type: 3}
+  - {fileID: 5997029112776162368, guid: 7f630fd52a39149679d704054ac57f9a, type: 3}
   selectingEntity: {fileID: 0}
   vecA: {x: 0, y: 0}
   vecB: {x: 0, y: 0}

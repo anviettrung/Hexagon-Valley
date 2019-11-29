@@ -155,6 +155,9 @@ MonoBehaviour:
   hexPointModel: {fileID: 3046106894108462097, guid: 7ef0e94292f684d099376d25908e9101,
     type: 3}
   edgeModel: {fileID: 0}
+  pointHolder: {fileID: 0}
+  edgeHolder: {fileID: 0}
+  entityHolder: {fileID: 0}
   hexPoints: []
   edges: []
   entities: []
@@ -285,11 +288,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8829446cf862247a88602944b4e983f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelBoard: {fileID: 2852915001747417894, guid: 4500a4b66d0104e1fa397952fd21979c,
+  modelBoard: {fileID: 2385621722454232320, guid: 9f592d9a764a14b6fba4a876bf21bcf0,
     type: 3}
   playerCharacterModel: {fileID: 2574718777226782401, guid: b6c64a0ab740a43f8bd54d163c3e404f,
     type: 3}
   playerFirstPositionInBoard: {x: 2, y: 1}
+  goal: {fileID: 0}
   player: {fileID: 0}
 --- !u!4 &781941784
 Transform:

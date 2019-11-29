@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [System.Serializable]
-public class Vector2IntEvent : UnityEvent<int, int>
-{
+public class Vector2IntEvent : UnityEvent<int, int> {}
 
-}
+[System.Serializable]
+public class BoardEntityEvent : UnityEvent<BoardEntity> {}
 
 // Extended Math Functions
 public static class ExdMath {

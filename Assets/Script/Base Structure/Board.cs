@@ -173,6 +173,19 @@ public class Board : MonoBehaviour
 		return null;
 	}
 
+	public List<BoardEntity> FindEntitiesAtPoint(HexPoint point)
+	{
+		List<BoardEntity> ents = new List<BoardEntity>();
+		for (int i = 0; i < entities.Count; i++) {
+			if (entities[i] != null) {
+				if (entities[i].positionInBoard == point.positionInBoard)
+					ents.Add(entities[i]);
+			}
+		}
+
+		return ents;
+	}
+
 	public void RemoveEntity(BoardEntity ent)
 	{
 		entities.Remove(ent);
